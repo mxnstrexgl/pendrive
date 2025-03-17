@@ -1,0 +1,16 @@
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "10.6.3"
+  # This allows the build to continue even if DATABASE_URL is not set
+  SKIP_ENV_VALIDATION = "true"
+
+[dev]
+  command = "pnpm run dev"
+  port = 3000
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
