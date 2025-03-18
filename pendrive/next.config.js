@@ -5,6 +5,9 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  // Add any necessary configuration here
+  // Keep it simple to avoid build issues
+};
 
 export default config;
