@@ -26,4 +26,17 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 
 ## How do I deploy this?
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Netlify Deployment Instructions
+
+1. Push your code to a GitHub repository
+2. Log in to Netlify and create a new site from your GitHub repository
+3. Set the following build settings:
+   - Base directory: `pendrive` (if your repository has a nested structure)
+   - Build command: `pnpm run build`
+   - Publish directory: `.next`
+4. Set the following environment variables in the Netlify dashboard:
+   - `SKIP_ENV_VALIDATION`: `true`
+   - `DATABASE_URL`: Your database URL (if applicable)
+5. Deploy your site
+
+For more general deployment guides, see [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) documentation.
